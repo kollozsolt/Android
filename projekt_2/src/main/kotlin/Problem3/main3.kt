@@ -1,4 +1,5 @@
 import Problem3.Date
+import Problem3.MyComparator
 import Problem3.leapYear
 import Problem3.valid
 import kotlin.random.Random
@@ -31,5 +32,9 @@ fun main(){
     println("------ Rendezve napok szerint ------")
     validDates.forEach{it.print()}
 
+    val myComparator = MyComparator()
+    validDates.sortWith(myComparator)
+    println("------ Rendezve napok szerint 2.0 ------")
+    validDates.forEach{it.print()}
 }
 

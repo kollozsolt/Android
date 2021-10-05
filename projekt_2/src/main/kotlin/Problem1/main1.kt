@@ -1,6 +1,5 @@
 package Problem1
 
-/////lzoli02
 enum class DictionaryType{
     ARRAY_LIST,
     TREE_SET,
