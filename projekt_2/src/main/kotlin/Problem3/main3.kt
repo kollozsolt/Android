@@ -28,7 +28,7 @@ fun main(){
     println("------ Fordított sorrend ------")
     validDates.forEach{it.print()}
     
-    validDates.sortWith(Comparator { o1: Date, o2: Date -> o1.getDay() - o2.getDay() })
+    validDates.sortWith(Comparator { o1: Date, o2: Date -> o1.day - o2.day })
     println("------ Rendezve napok szerint ------")
     validDates.forEach{it.print()}
 

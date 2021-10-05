@@ -6,34 +6,9 @@ import java.time.Year
 import java.util.*
 import kotlin.Comparator
 
-class Date: Comparable<Date>{
-    private var year: Int = 0
-    private var month: Int = 0
-    private var day: Int = 0
-
-    constructor(){
-        year = LocalDateTime.now().year
-        month = LocalDateTime.now().monthValue
-        day = LocalDateTime.now().dayOfMonth
-    }
-
-    constructor(year: Int, month: Int, day: Int){
-        this.year = year
-        this.month = month
-        this.day = day
-    }
-
-    fun getYear(): Int {
-        return year;
-    }
-
-    fun getMonth(): Int {
-        return month;
-    }
-
-    fun getDay(): Int {
-        return day;
-    }
+data class Date(var year: Int = LocalDateTime.now().year,
+                var month: Int = LocalDateTime.now().monthValue,
+                var day: Int = LocalDateTime.now().dayOfMonth): Comparable<Date>{
 
     fun print(){
         println("$year - $month - $day")
@@ -48,9 +23,9 @@ class Date: Comparable<Date>{
 }
 
 fun Date.leapYear():Boolean {
-    if ( this.getYear() % 400 == 0 ){
+    if ( this.year % 400 == 0 ){
         return true
-    } else if (this.getYear() % 4 == 0 && this.getYear() % 100 != 0){
+    } else if (this.year % 4 == 0 && this.year % 100 != 0){
         return true
     }
     return false
@@ -59,8 +34,8 @@ fun Date.leapYear():Boolean {
 fun Date.valid(): Boolean {
     val february: Int = if (this.leapYear()) {29} else {28}
     val numberOfDays = listOf(31,february,31,30,31,30,31,31,30,31,30,31)
-    if (this.getYear() < 0) return false
-    if (this.getMonth() !in 1..12) return false
-    if (this.getDay() > numberOfDays.get(this.getMonth()-1)) return false
+    if (this.year < 0) return false
+    if (this.month !in 1..12) return false
+    if (this.day > numberOfDays.get(this.month-1)) return false
     return true
 }

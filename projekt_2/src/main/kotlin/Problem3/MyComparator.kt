@@ -5,7 +5,7 @@ class MyComparator: Comparator<Date> {
         if(o1 == null || o2 == null){
             return 0;
         }
-        return o1.getDay().compareTo(o2.getDay())
+        return o1.day.compareTo(o2.day)
     }
 
 }
