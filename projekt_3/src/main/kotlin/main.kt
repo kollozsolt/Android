@@ -1,3 +1,4 @@
 fun main(args: Array<String>) {
-    println("Hello World!")
+    var question = QuizController
+    question.doQuiz(10)
 }
