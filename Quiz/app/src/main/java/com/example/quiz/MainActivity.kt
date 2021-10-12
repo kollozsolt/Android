@@ -1,14 +1,13 @@
 package com.example.quiz
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
+import android.provider.AlarmClock.EXTRA_MESSAGE
 import android.util.Log
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
-import android.widget.LinearLayout
 import android.widget.Toast
-import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
@@ -20,21 +19,20 @@ class MainActivity : AppCompatActivity() {
         val nameEditText: EditText = findViewById(R.id.nameTextInput)
 
         clickButton.setOnClickListener {
-            val name = nameEditText.text
-            if (name.toString() != "") {
+            val name = nameEditText.text.toString()
+            if (name != "") {
                 Toast.makeText(
                     applicationContext,
                     "Let the fun begin, $name!",
                     Toast.LENGTH_SHORT
                 ).show()
 
-                Snackbar.make(
-                    findViewById(R.id.main), // Parent view
-                    "Let the fun begin, $name!", // Message to show
-                    Snackbar.LENGTH_SHORT // How long to display the message.
-                ).setAction("OK", {}).show()
-
                 Log.d("MainActivity", "Starting the quiz")
+
+                val intent = Intent(this, SecondActivity::class.java).apply {
+                    putExtra(EXTRA_MESSAGE, name)
+                }
+                startActivity(intent)
             } else {
                 Toast.makeText(
                     applicationContext,
