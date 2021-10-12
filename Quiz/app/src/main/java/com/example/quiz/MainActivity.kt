@@ -25,16 +25,16 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(
                     applicationContext,
                     "Let the fun begin, $name!",
-                    Toast.LENGTH_LONG
+                    Toast.LENGTH_SHORT
                 ).show()
 
                 Snackbar.make(
                     findViewById(R.id.main), // Parent view
                     "Let the fun begin, $name!", // Message to show
-                    Snackbar.LENGTH_INDEFINITE // How long to display the message.
+                    Snackbar.LENGTH_SHORT // How long to display the message.
                 ).setAction("OK", {}).show()
 
-                Log.i("OnClick", "Starting the quiz")
+                Log.d("MainActivity", "Starting the quiz")
             } else {
                 Toast.makeText(
                     applicationContext,
@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
                     Snackbar.LENGTH_INDEFINITE // How long to display the message.
                 ).setAction("OK", {}).show()
 
-                Log.i("OnClick", "Missing the name")
+                Log.d("MainActivity", "Missing the name")
             }
         }
     }
