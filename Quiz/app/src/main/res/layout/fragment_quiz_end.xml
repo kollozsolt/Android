@@ -7,51 +7,52 @@
     android:layout_height="match_parent"
     tools:context=".fragment.QuizStartFragment">
 
-    <Button
-        android:id="@+id/chooseContactButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Choose Contact"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameTextInput"
-        app:layout_constraintVertical_bias="0.282" />
-
     <TextView
-        android:id="@+id/quizTextView"
+        android:id="@+id/quizResultTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quiz!"
-        android:textSize="32dp"
+        android:text="Quiz result"
+        android:textSize="25dp"
+        android:textColor="@color/teal_200"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.326" />
+        app:layout_constraintVertical_bias="0.155" />
 
-    <EditText
-        android:id="@+id/nameTextInput"
+    <TextView
+        android:id="@+id/scoreTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Your name"
-        android:inputType="textPersonName"
+        android:text="TextView"
+        android:textColor="@color/orange"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quizResultTextView"
+        app:layout_constraintVertical_bias="0.081" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="117dp"
+        android:layout_height="191dp"
+        android:src="?android:attr/actionModeFindDrawable"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quizTextView"
-        app:layout_constraintVertical_bias="0.20999998" />
+        app:layout_constraintTop_toBottomOf="@+id/scoreTextView"
+        app:layout_constraintVertical_bias="0.171" />
 
     <Button
-        android:id="@+id/startButton"
+        android:id="@+id/tryAgainButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#FF9800"
-        android:text="GET STARTED"
+        android:text="TRY AGAIN"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chooseContactButton" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.331" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

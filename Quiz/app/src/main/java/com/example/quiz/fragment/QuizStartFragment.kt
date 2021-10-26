@@ -3,7 +3,6 @@ package com.example.quiz.fragment
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.provider.AlarmClock
 import android.provider.ContactsContract
 import android.text.Editable
 import android.util.Log
@@ -16,11 +15,14 @@ import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.activityViewModels
 import com.example.quiz.R
-import com.example.quiz.SecondActivity
-import com.google.android.material.snackbar.Snackbar
+import com.example.quiz.SharedViewModel
 
 class QuizStartFragment : Fragment() {
+
+    private val model: SharedViewModel by activityViewModels()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -38,13 +40,15 @@ class QuizStartFragment : Fragment() {
         clickButton.setOnClickListener {
             val name = nameEditText.text.toString()
             if (name != "") {
+                model.setName(name)
                 Toast.makeText(
                     activity,
                     "Let the fun begin, $name!",
                     Toast.LENGTH_SHORT
                 ).show()
-
                 Log.d("MainActivity", "Starting the quiz")
+                val supportFragment: FragmentManager? = activity?.supportFragmentManager
+                supportFragment?.beginTransaction()?.replace(R.id.fragmentContainerView, QuestionFragment())?.commit()
             } else {
                 Toast.makeText(
                     activity,
