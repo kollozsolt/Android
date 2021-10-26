@@ -19,23 +19,28 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.activityViewModels
 import com.example.quiz.R
 import com.example.quiz.SharedViewModel
+import com.example.quiz.databinding.FragmentQuizStartBinding
 
 class QuizStartFragment : Fragment() {
+
+    private var _binding: FragmentQuizStartBinding? = null
+    private val binding get() = _binding!!
 
     private val model: SharedViewModel by activityViewModels()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_quiz_start, container, false)
+        _binding = FragmentQuizStartBinding.inflate(inflater, container, false)
+        return binding?.root
     }
 
     private lateinit var nameEditText: EditText;
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-        var clickButton: Button = view.findViewById(R.id.startButton)
-        var chooseButton: Button = view.findViewById(R.id.chooseContactButton)
-        nameEditText = view.findViewById(R.id.nameTextInput)
+        var clickButton: Button = binding.startButton
+        var chooseButton: Button = binding.chooseContactButton
+        nameEditText = binding.nameTextInput
 
         clickButton.setOnClickListener {
             val name = nameEditText.text.toString()

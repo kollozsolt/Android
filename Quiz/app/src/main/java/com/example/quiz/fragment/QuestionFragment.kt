@@ -15,9 +15,13 @@ import com.example.quiz.Question
 import com.example.quiz.QuizController
 import com.example.quiz.R
 import com.example.quiz.SharedViewModel
+import com.example.quiz.databinding.FragmentQuestionBinding
+import com.example.quiz.databinding.FragmentQuizEndBinding
 
 
 class QuestionFragment : Fragment() {
+    private var _binding: FragmentQuestionBinding? = null
+    private val binding get() = _binding!!
 
     private val model: SharedViewModel by activityViewModels()
 
@@ -39,8 +43,8 @@ class QuestionFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_question, container, false)
+        _binding = FragmentQuestionBinding.inflate(inflater, container, false)
+        return binding?.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -49,12 +53,12 @@ class QuestionFragment : Fragment() {
         geek2 = RadioButton(context)
         geek3 = RadioButton(context)
         geek4 = RadioButton(context)
-        button = view.findViewById(R.id.nextButton)
-        text = view.findViewById(R.id.questionTextView)
+        button = binding.nextButton
+        text = binding.questionTextView
         model.makeQuizController(requireContext())
         questions = model.getQuestions()
 
-        rg = view.findViewById(R.id.radioGroup)
+        rg = binding.radioGroup
         addRadiobuttons(rg)
 
         text.setText(questions[0].text)

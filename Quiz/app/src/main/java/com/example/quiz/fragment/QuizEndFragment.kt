@@ -11,8 +11,12 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.activityViewModels
 import com.example.quiz.R
 import com.example.quiz.SharedViewModel
+import com.example.quiz.databinding.FragmentQuizEndBinding
+import com.example.quiz.databinding.FragmentQuizStartBinding
 
 class QuizEndFragment : Fragment() {
+    private var _binding: FragmentQuizEndBinding? = null
+    private val binding get() = _binding!!
 
     private val model: SharedViewModel by activityViewModels()
 
@@ -21,14 +25,15 @@ class QuizEndFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_quiz_end, container, false)
+        _binding = FragmentQuizEndBinding.inflate(inflater, container, false)
+        return binding?.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val score = model.getScore()
-        val text:TextView = view.findViewById(R.id.scoreTextView)
-        val button:Button = view.findViewById(R.id.tryAgainButton)
+        val text:TextView = binding.scoreTextView
+        val button:Button = binding.tryAgainButton
         text.setText("10/$score")
         button.setOnClickListener{ tryAgain() }
     }
