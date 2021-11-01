@@ -74,7 +74,6 @@ class QuestionFragment : Fragment() {
     }
 
     fun showAreYouSureDialog(){
-        Log.d("KAKA", "Pressed")
         val builder = AlertDialog.Builder(requireContext())
         builder.setTitle("Exit")
         builder.setMessage("Are you sure you want to end this quiz?")
