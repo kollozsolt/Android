@@ -10,6 +10,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.FragmentManager
 import com.example.quiz.databinding.ActivityMainBinding
 import com.example.quiz.fragment.HomeFragment
+import com.example.quiz.fragment.QuestionAddFragment
 import com.example.quiz.fragment.QuizStartFragment
 import com.google.android.material.navigation.NavigationView
 
@@ -55,7 +56,8 @@ class MainActivity : AppCompatActivity() {
                     drawerLayout.closeDrawer(GravityCompat.START)
                 }
                 R.id.nav_new_question -> {
-                    Toast.makeText(applicationContext, "Clicked New Question", Toast.LENGTH_SHORT).show()
+                    supportFragment.beginTransaction()
+                        .replace(R.id.fragmentContainerView, QuestionAddFragment()).commit()
                     drawerLayout.closeDrawer(GravityCompat.START)
                 }
             }
