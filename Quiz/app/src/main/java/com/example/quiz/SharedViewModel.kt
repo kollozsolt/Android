@@ -40,5 +40,4 @@ class SharedViewModel: ViewModel() {
     fun zero(){
         this.score = 0
     }
-
 }
