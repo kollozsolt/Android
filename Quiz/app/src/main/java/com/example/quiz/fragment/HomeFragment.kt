@@ -17,6 +17,7 @@ class HomeFragment : Fragment() {
 
     private lateinit var startButton: Button
     private lateinit var newQuestionButton: Button
+    private lateinit var listButton: Button
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,11 +30,17 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         startButton = binding.homeButton1
+        listButton = binding.homeButton2
         newQuestionButton = binding.homeButton3
 
         startButton.setOnClickListener {
             val supportFragment: FragmentManager? = activity?.supportFragmentManager
             supportFragment?.beginTransaction()?.replace(R.id.fragmentContainerView, QuizStartFragment())?.commit()
+        }
+
+        listButton.setOnClickListener {
+            val supportFragment: FragmentManager? = activity?.supportFragmentManager
+            supportFragment?.beginTransaction()?.replace(R.id.fragmentContainerView, ListFragment())?.commit()
         }
 
         newQuestionButton.setOnClickListener{

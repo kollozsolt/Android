@@ -35,9 +35,14 @@ class ListFragment : Fragment() {
         val questionsList = getQuestions(requireContext())
 
         val exampleList = mutableListOf<ExampleItem>()
-
+        var poz = 0
         for (i in questionsList){
-            val rightAnswer = "KAKA"
+            for (j in 0..(i.answers.size-1)){
+                if (i.answers[j].isCorrect == 1){
+                    poz = j
+                }
+            }
+            val rightAnswer = i.answers[poz].text;
             exampleList.add(ExampleItem(i.text, "Single answer", rightAnswer))
         }
         val recycleView: RecyclerView = binding.recyclerView
