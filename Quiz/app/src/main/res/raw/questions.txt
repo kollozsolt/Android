@@ -1,50 +1,200 @@
-    Alma?
-    alma/1
-    korte/0
-    barack/0
-    dinye/0
-    Korte?
-    alma/0
-    korte/1
-    barack/0
-    dinye/0
-    Barack?
-    alma/0
-    korte/0
-    barack/1
-    dinye/0
-    Dinye?
-    alma/0
-    korte/0
-    barack/0
-    dinye/1
-    Kocsi?
-    kocsi/1
-    repulo/0
-    bicikli/0
-    hajo/0
-    Repulo?
-    kocsi/0
-    repulo/1
-    bicikli/0
-    hajo/0
-    Bicikli?
-    kocsi/0
-    repulo/0
-    bicikli/1
-    hajo/0
-    Hajo?
-    kocsi/0
-    repulo/0
-    bicikli/0
-    hajo/1
-    Tudom erre a valaszt?
-    igen/1
-    nem/0
-    talan/0
-    egyaltalan nem/0
-    Ki Brassai?
-    Samuel/1
-    nem ismerem :(/0
-    inkabb nem nyilatkozom/0
-    legjobb tanar <3/0
+Alma?
+alma/1
+korte/0
+barack/0
+dinye/0
+Korte?
+alma/0
+korte/1
+barack/0
+dinye/0
+Barack?
+alma/0
+korte/0
+barack/1
+dinye/0
+Dinye?
+alma/0
+korte/0
+barack/0
+dinye/1
+Kocsi?
+kocsi/1
+repulo/0
+bicikli/0
+hajo/0
+Repulo?
+kocsi/0
+repulo/1
+bicikli/0
+hajo/0
+Bicikli?
+kocsi/0
+repulo/0
+bicikli/1
+hajo/0
+Hajo?
+kocsi/0
+repulo/0
+bicikli/0
+hajo/1
+Tudom erre a valaszt?
+igen/1
+nem/0
+talan/0
+egyaltalan nem/0
+Ki Brassai?
+Samuel/1
+nem ismerem :(/0
+inkabb nem nyilatkozom/0
+legjobb tanar <3/0
+Alma?
+alma/1
+korte/0
+barack/0
+dinye/0
+Korte?
+alma/0
+korte/1
+barack/0
+dinye/0
+Barack?
+alma/0
+korte/0
+barack/1
+dinye/0
+Dinye?
+alma/0
+korte/0
+barack/0
+dinye/1
+Kocsi?
+kocsi/1
+repulo/0
+bicikli/0
+hajo/0
+Repulo?
+kocsi/0
+repulo/1
+bicikli/0
+hajo/0
+Bicikli?
+kocsi/0
+repulo/0
+bicikli/1
+hajo/0
+Hajo?
+kocsi/0
+repulo/0
+bicikli/0
+hajo/1
+Tudom erre a valaszt?
+igen/1
+nem/0
+talan/0
+egyaltalan nem/0
+Ki Brassai?
+Samuel/1
+nem ismerem :(/0
+inkabb nem nyilatkozom/0
+legjobb tanar <3/0
+Alma?
+alma/1
+korte/0
+barack/0
+dinye/0
+Korte?
+alma/0
+korte/1
+barack/0
+dinye/0
+Barack?
+alma/0
+korte/0
+barack/1
+dinye/0
+Dinye?
+alma/0
+korte/0
+barack/0
+dinye/1
+Kocsi?
+kocsi/1
+repulo/0
+bicikli/0
+hajo/0
+Repulo?
+kocsi/0
+repulo/1
+bicikli/0
+hajo/0
+Bicikli?
+kocsi/0
+repulo/0
+bicikli/1
+hajo/0
+Hajo?
+kocsi/0
+repulo/0
+bicikli/0
+hajo/1
+Tudom erre a valaszt?
+igen/1
+nem/0
+talan/0
+egyaltalan nem/0
+Ki Brassai?
+Samuel/1
+nem ismerem :(/0
+inkabb nem nyilatkozom/0
+legjobb tanar <3/0
+Alma?
+alma/1
+korte/0
+barack/0
+dinye/0
+Korte?
+alma/0
+korte/1
+barack/0
+dinye/0
+Barack?
+alma/0
+korte/0
+barack/1
+dinye/0
+Dinye?
+alma/0
+korte/0
+barack/0
+dinye/1
+Kocsi?
+kocsi/1
+repulo/0
+bicikli/0
+hajo/0
+Repulo?
+kocsi/0
+repulo/1
+bicikli/0
+hajo/0
+Bicikli?
+kocsi/0
+repulo/0
+bicikli/1
+hajo/0
+Hajo?
+kocsi/0
+repulo/0
+bicikli/0
+hajo/1
+Tudom erre a valaszt?
+igen/1
+nem/0
+talan/0
+egyaltalan nem/0
+Ki Brassai?
+Samuel/1
+nem ismerem :(/0
+inkabb nem nyilatkozom/0
+legjobb tanar <3/0
